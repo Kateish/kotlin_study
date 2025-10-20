@@ -1,30 +1,30 @@
 package org.example.org.example.lessons.lesson13.homeworks
 
 class Task {
-    // = 1️⃣ Среднее время выполнения теста =
+    //  Среднее время выполнения теста
     val testTimes = mapOf("testLogin" to 5.3, "testCheckout" to 8.2, "testSearch" to 6.5)
     val averageTime = testTimes.values.average()
     println("Среднее время выполнения: $averageTime сек.")
 
-    // = 2️⃣ Список всех тестовых методов =
+    //  Список всех тестовых методов
     val testMeta = mapOf("testLogin" to "UI test", "testCheckout" to "Smoke", "testSearch" to "Regression")
     println("Методы: ${testMeta.keys}")
 
-    // = 3️⃣ Добавление нового теста =
+    // Добавление нового теста
     val testResults = mutableMapOf("testLogin" to "passed", "testCheckout" to "failed")
     testResults["testSearch"] = "passed"
     println(testResults)
 
-    // = 4️⃣ Подсчет успешных тестов =
+    //Подсчет успешных тестов
     val passedCount = testResults.count { it.value == "passed" }
     println("Успешных тестов: $passedCount")
 
-    // = 5️⃣ Удаление исправленного бага =
+    //Удаление исправленного бага
     val bugs = mutableMapOf("BUG-101" to "fixed", "BUG-102" to "open")
     bugs.remove("BUG-101")
     println(bugs)
 
-    // Сообщение о статусе страницы =
+    // Сообщение о статусе страницы
     val pageStatuses = mapOf("index.html" to 200, "about.html" to 404)
     pageStatuses.forEach { (page, status) ->
         println("Страница $page — статус $status")
